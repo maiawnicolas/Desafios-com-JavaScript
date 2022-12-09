@@ -1,0 +1,23 @@
+/* 
+
+   PROGRAMA PARA CALCULAR O VALOR GASTO COM COMBUSTIVEL DURANTE UMA VIAJEM.
+   O VALOR DOS COMBUSTIVEIS SERIA PARA UM CARRO FLEX QUE PRECISA UTILIZAR A MESMA QUANTIDADE DE GASOLINA E ETANOL.
+   O PROGRAMA UTILIZA AS 4 OPERACOES DE CALCULOS PARA GERAR OS RESULTADOS. DA SEGUINTE FORMA:
+     1 ELE PEGA A DISTANCIA EM KM E DIVIDE POR KM POR LITRO.
+     2 QUANDO ELE TEM O RESULTADO DESSA DIVISÃO ELE MULTIPLICA PELO DESCONTO NO DEBITO.
+     3 ENTAO ELE FINALIZA COM O RESULTADO DA PRIMEIRA ETAPA VEZES O VALOR DOS COMBUSTIVEIS E SUBTRAI COM O VALOR TOTAL DO DESCONTO.
+    
+   
+   */
+
+
+const valordosCombustiveis = 6.38 + 4.50;   
+const descontoNoDebito = 0.25;
+const kmPorLitro = 12;
+const distanciaEmKm = 1678;
+
+const litrosPelaDistancia = distanciaEmKm / kmPorLitro;
+const descontoTotal = descontoNoDebito * litrosPelaDistancia;
+const gastoTotal = litrosPelaDistancia * valordosCombustiveis - descontoTotal;
+console.log(gastoTotal.toFixed(2));
+
